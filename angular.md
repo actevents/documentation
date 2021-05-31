@@ -6,7 +6,7 @@ Diese kapseln die Logik, welche für die Kommunikation zu den Backend-Services b
 
 Hierfür wurde der vom Angular Framework bereitgestellte ```HttpClient``` über Dependency Injection verwendet.
 
-Insgesamt wurden 3 Services implementiert:
+Insgesamt wurden 4 Services implementiert:
 
 1. __AuthService__, verantwortlich für die Kommunikation mit Cognito und das Credential-/Session-Management.
 1. __LocationService__, verantwortlich für das Abrufen der Position des Gerätes über die ```navigator``` Schnittstelle des Browsers.
