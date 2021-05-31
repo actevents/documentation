@@ -30,7 +30,7 @@ In einer Karte, welche auf dem Framework ```OpenLayers``` basiert werden die Eve
 Wenn ein Event angeklickt wird öffnet sich die Detailansicht, worüber alle Informationen eingesehen werden können.
 Außerdem lässt sich über die Detailansicht ein Event als Favorit markieren.
 
-![](images/angular_discover.png =200x)
+![](images/angular_discover.png)
 
 ### Saved
 Auf der Saved Page werden einem Benutzer alle von ihm als Favorit markierten Events in einer Liste angezeigt.
@@ -39,14 +39,20 @@ Dieser werden von der API unter dem Endpunkt ```/favorites``` abgerufen.
 
 Über einen klick auf ein gespeichertes Event wird ebenfalls die Detailseite aufgerufen.
 
+![](images/angular_event-detail.png)
+
 ### Settings
 Auf dieser Seite lassen sich die vom aktuell angemeldeten Nutzer erstellten Events managen.
 Ebenfalls kann dieser sich über eine Schaltfläche von der Applikation abmelden und landet danach auf der Login/Register Page.
+
+![](images/angular_settings.png)
 
 Auf der Unterseite der eigenen Events lassen sich über eine Schaltfläche neue Events erstellen.
 Hierzu wird ein Formular geöffnet, welches mithilfe der Forms Funktionalität von Angular erstellt wurde und Validierung und Anzeige von Fehleingaben automatisch handhabt.
 
 Um ein Event zu erstellen oder wieder zu löschen wird wieder der bereits angesprochene ```EventsService``` verwendet.
+
+![](images/angular_event-create.png)
 
 
 ## Credential Management
