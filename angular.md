@@ -9,6 +9,7 @@ Hierfür wurde der vom Angular Framework bereitgestellte ```HttpClient``` über 
 Insgesamt wurden 3 Services implementiert:
 
 1. __AuthService__, verantwortlich für die Kommunikation mit Cognito und das Credential-/Session-Management.
+1. __LocationService__, verantwortlich für das Abrufen der Position des Gerätes über die ```navigator``` Schnittstelle des Browsers.
 1. __EventsService__, verantwortlich für die Kommunikation mit dem API Gateway rund um das Abrufen und Anlegen von Events.
 1. __FavoritesService__, verantwortlich für die Kommunikation mit dem API Gateway hinsichtlich der Favoriten.
 
@@ -24,6 +25,7 @@ Innerhalb der Discover Page werden alle Events in einem ausgewählten Umkreis an
 Hierbei steht ein Slider zur Verfügung, welcher bei Änderungen seinen neuen Wert im LocalStorage des Browsers persistiert und die Events und Kartenansicht basierend auf dem neuen Suchradius aktualisiert.
 
 Abgerufen werden die Events über einen bereits angesprochenen ```EventsService```, welche die Events von der API Schnittstelle ```/events``` abruft.
+Hierfür wird zuerst die aktuelle Position des Benutzers über den ```LocationService``` abgerufen.
 
 In einer Karte, welche auf dem Framework ```OpenLayers``` basiert werden die Events in der Nähe über Marker dargestellt.
 
@@ -53,6 +55,13 @@ Hierzu wird ein Formular geöffnet, welches mithilfe der Forms Funktionalität v
 Um ein Event zu erstellen oder wieder zu löschen wird wieder der bereits angesprochene ```EventsService``` verwendet.
 
 ![](images/angular_event-create.png)
+
+Hierbei kann zu einem Event auch ein Bild hochgeladen werden, welches auf mobilen Geräten entweder aus der Bildergalerie ausgewählt werden kann oder allerdings durch die Nutzung der Kamera direkt aufgenommen werden kann.
+
+Hierbei wird das Browserverhalten auf einem Mobilgerät genutzt, indem ein normales HTML Input Feld des Types _file_ verwendet wird.
+```html
+<input type="file" accept="image/*" />
+```
 
 
 ## Credential Management
