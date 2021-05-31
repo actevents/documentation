@@ -80,45 +80,6 @@ Innerhalb der Angular Applikation wurde nur der _Auth_ Teil von Amplify verwende
 
 Über Methoden wie ```Auth.signIn(...)```, ```Auth.signUp(...)``` oder ```Auth.signOut()``` kann der Benutzer so angemeldet, registriert oder abgemeldet werden.
 Cognito handhabt dabei das komplette Credentialmanagement wie das Speichern (LocalStorage) und Erneuern von ID-/Access-/Refresh-Tokens zur Authentifizierung über Cognito, ohne dass ein manuelles Eingreifen nötig wäre.
-
-## Flutter
-Die Flutter Anwendung ist in zwei Stufen aufgeteilt.
-1. Nicht angemeldet
-    
-    Wenn der Benutzer nicht angemeldet ist hat er die Möglichkeit sich anzumelden oder zu registrieren. Bei erfolgreichem Anmelden wird er auf die Angemeldet Stufe weitergeleitet.
-
-    __Logisseite:__    
-    ![](images/flutter_screenshot1.png)
-    __Registierungsseite:__
-    ![](images/flutter_screenshot2.png)
-
-1. Angemeldet
-    
-    Sobald der Benutzer angemeldet ist, landet dieser auf der ``Findenseite``. Die Anmeldung ist auch über die App laufzeit hinweg gespeichert.
-
-### Event Pages
-
-1. _Findenseite_
-    1. Auf der Findenseite werden alle aktuellen Events angezeigt die sich in einem gewissen Umkreis(default 50km) vom Standort des Gerätes. Der Umkreis kann über die Filteroptionen angepasst werden.
-    ![](images/flutter_screenshot3.png)
-    1. Für eine __Detailansicht des jeweiligen Events__ kann auf das Event getippt werden. Auf der Detailsseite sind dann nochmal zusätzliche Informationen wie die Beschreibung und der Zeitraum des Events ersichtlich.
-    ![](images/flutter_screenshot10.png)
-    1. Für das __Speichern in die Favoriten__ muss auf den Stern getippt werden.
-    1. Für das __Anlegen eines neuen Events__ kann der Plusbutton benutzt werden. Danach wird der Nutzer auf eine neue Anlegenseite weitergeleitet.
-    ![](images/flutter_screenshot5.png)
-    ![](images/flutter_screenshot6.png)
-    Nach Eingabe der Daten werden diese validiert und an den Server geschickt.
-1. _Favoritenseite_
-    Hier werden alle Events angezeigt die der Benutzer individuell gespeichert hat.
-    ![](images/flutter_screenshot4.png)
-1. _Profilseite_
-    Auf der Profilseite kann sich der Benutzer abmelden und kann die eigenen Events gelöschen.
-    ![](images/flutter_screenshot8.png)
-    ![](images/flutter_screenshot9.png)
-
-### Credential Management
-
-
 ## Persistenz
 Damit Events gespeichert bleiben, wird Amazon DynamoDB verwendet. DynamoDB ist eine NoSQL-Datenbank. Die Events haben folgende Attribute in der Datenbank.
 
