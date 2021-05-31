@@ -30,6 +30,8 @@ In einer Karte, welche auf dem Framework ```OpenLayers``` basiert werden die Eve
 Wenn ein Event angeklickt wird öffnet sich die Detailansicht, worüber alle Informationen eingesehen werden können.
 Außerdem lässt sich über die Detailansicht ein Event als Favorit markieren.
 
+![](images/angular_discover.png =200x)
+
 ### Saved
 Auf der Saved Page werden einem Benutzer alle von ihm als Favorit markierten Events in einer Liste angezeigt.
 
