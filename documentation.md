@@ -20,3 +20,14 @@ Während Cognito für die User-Authentifizierung und Registrierung zuständig is
 
 ## <a name="chapter-api"></a> Kommunikation zwischen Back-End und den Front-Ends 
 Die Kommunikation zwischen dem Back-End und den Front-Ends funktioniert über eine REST-API, die folgende Endpunkte bereitstellt.
+
+## Umsetzung der UI
+### Angular
+UI Angular
+### Flutter
+UI Flutter
+
+## Credential Management
+### Angular
+
+### Flutter
