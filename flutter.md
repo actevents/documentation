@@ -13,6 +13,8 @@ Die Flutter Anwendung ist in zwei Stufen aufgeteilt.
     
     Sobald der Benutzer angemeldet ist, landet dieser auf der ``Findenseite``. Die Anmeldung ist auch über die App laufzeit hinweg gespeichert.
 
+![](images/flutter_page_navigation.png)
+
 ## Event Pages
 
 ### _Findenseite_
@@ -38,8 +40,17 @@ Auf der Profilseite kann sich der Benutzer abmelden und kann die eigenen Events 
 
 Die Logindaten werden über Amplify gespeichert und für die Appservices bereitgestellt.
 
+## Verwendete Abhängigkeiten
+
+- amplify_flutter: Framework für die Kommunikation mit AWS Services
+- amplify_auth_cognito: Framework für die Kommunikation mit AWS Cognito
+- geolocator: Bibliothek für die Geolokation
+- flutter_map: Bibliothek für Karten UI Elemente
+- camera: Bibliothek für die Kamera UI Elemente
+
+
 ## Services
 
-- Locationservice:
-- Apiservice:
-- Authservice:
+- AuthService: Verwaltet die An- und Abmeldung der Session
+- LocationService: Verwaltet Position und GPS-Sensor
+- ApiService: Fasst API-Zugriffe in einem Service zusammen
