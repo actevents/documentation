@@ -255,7 +255,7 @@ paths:
               - png
         responses:
           "200":
-            description: Successfull created S3 Bucket for image
+            description: Successful creation of S3 Bucket for image
             content:
               application/json:
                 schema:
