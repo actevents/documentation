@@ -18,7 +18,7 @@ Während Cognito für die User-Authentifizierung und Registrierung zuständig is
 
 Über das API-Gateway wird den Front-Ends eine REST-API bereitgestellt (vgl. [Kommunikation zwischen Back-End und den Front-Ends](#chapter-api)), die für die Hauptfunktionen der Applikation zuständig ist. Durch diese REST-API werden wiederum Lambdas aufgerufen, die dann zum Beispiel auf die persistent gespeicherten Events in der DynamoDB zugreifen oder welche in dieser anlegen.
 
-Zur Benutzerauthentifizierung wird Amazon Cognito verwendet. Dabei wird ein Benutzerpool mit zwei App-Clients erstellt, welcher die Authentifizierung an dem jeweiligen Client ermöglicht. Bei der Erstellung des Benutzerpools können verschiedene Attribute für einen Benutzer ausgewählt oder hinzugefügt werden. Für Actevents wird nur eine E-Mail Adresse benötigt. Cognito ermöglicht auch die Authentifizierung über externe Identitätsanbieter wie bspw. Google oder Facebook. 
+Zur Benutzerauthentifizierung wird Amazon Cognito verwendet. Dabei wird ein Benutzerpool mit zwei App-Clients erstellt, welcher die Authentifizierung an dem jeweiligen Client ermöglicht. Bei der Erstellung des Benutzerpools können verschiedene Attribute für einen Benutzer ausgewählt oder hinzugefügt werden. Für die Authentifizierung in Actevents wird nur eine E-Mail Adresse benötigt. Cognito ermöglicht auch die Authentifizierung über externe Identitätsanbieter wie bspw. Google oder Facebook. 
 
 ## <a name="chapter-api"></a> Kommunikation zwischen Back-End und den Front-Ends 
 Die Kommunikation zwischen dem Back-End und den Front-Ends funktioniert über eine REST-API, die folgende Endpunkte bereitstellt.
@@ -51,7 +51,7 @@ Abgerufen werden die Events über einen bereits angesprochenen ```EventsService`
 
 In einer Karte, welche auf dem Framework ```OpenLayers``` basiert werden die Events in der Nähe über Marker dargestellt.
 
-Wenn ein Event angeklickt wird öffnet sich die Detailansicht, worüber alle Informationen eingesehen werden können.
+Wenn ein Event angeklickt wird, öffnet sich die Detailansicht, worüber alle Informationen eingesehen werden können.
 Außerdem lässt sich über die Detailansicht ein Event als Favorit markieren.
 
 #### Saved
@@ -59,7 +59,7 @@ Auf der Saved Page werden einem Benutzer alle von ihm als Favorit markierten Eve
 
 Dieser werden von der API unter dem Endpunkt ```/favorites``` abgerufen.
 
-Über einen klick auf ein gespeichertes Event wird ebenfalls die Detailseite aufgerufen.
+Über einen Klick auf ein gespeichertes Event wird ebenfalls die Detailseite aufgerufen.
 
 #### Settings
 Auf dieser Seite lassen sich die vom aktuell angemeldeten Nutzer erstellten Events managen.
@@ -104,4 +104,4 @@ Damit Events gespeichert bleiben, wird Amazon DynamoDB verwendet. DynamoDB ist e
 * price: Der Preis des Events
 * tags: Die Tags des Events
 
-Das Persistieren der Bilder folgt über einen Amazon S3-Bucket. Hier können die einzelnen Bilder abgelegt werden. Der Name eines solchen Bildes ist hierbei eine UUID. Diese ist in der Datenbank bei dem zugehörigen Event abgelegt. Das Hochladen der Bilder folgt über einen generierten Link. Dieser enthält Parameter wie den S3-Bucket, den Name der Datei und den zulässigen Inhalt der  hochgeladen werden darf.
+Das Persistieren der Bilder folgt über einen Amazon S3-Bucket. Hier können die einzelnen Bilder abgelegt werden. Der Name eines solchen Bildes ist hierbei eine UUID. Diese ist in der Datenbank bei dem zugehörigen Event abgelegt. Das Hochladen der Bilder folgt über einen generierten Link. Dieser enthält Parameter wie den S3-Bucket, den Name der Datei und den zulässigen Inhalt der hochgeladen werden darf.
