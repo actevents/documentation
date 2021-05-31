@@ -22,6 +22,8 @@ Zur Benutzerauthentifizierung wird Amazon Cognito verwendet. Dabei wird ein Benu
 
 ## <a name="chapter-api"></a> Kommunikation zwischen Back-End und den Front-Ends 
 Die Kommunikation zwischen dem Back-End und den Front-Ends funktioniert über eine REST-API, die folgende Endpunkte bereitstellt.
+![Swagger Docu](./images/APIDocu.jpg)
+Eine genaue Definition dieser als OpenAPI findet sich in der [apidoc.yml](apidoc.yml).
 
 
 ## Angular
