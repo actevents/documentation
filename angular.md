@@ -12,8 +12,6 @@ Insgesamt wurden 3 Services implementiert:
 1. __EventsService__, verantwortlich für die Kommunikation mit dem API Gateway rund um das Abrufen und Anlegen von Events.
 1. __FavoritesService__, verantwortlich für die Kommunikation mit dem API Gateway hinsichtlich der Favoriten.
 
-___
-
 ## Module
 Die Angular Anwendung wurde in 3 Bereiche/Module unterteilt:
 
@@ -48,7 +46,6 @@ Hierzu wird ein Formular geöffnet, welches mithilfe der Forms Funktionalität v
 
 Um ein Event zu erstellen oder wieder zu löschen wird wieder der bereits angesprochene ```EventsService``` verwendet.
 
-___
 
 ## Credential Management
 
